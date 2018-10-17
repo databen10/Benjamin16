@@ -1,0 +1,10 @@
+library("httpuv")
+library(httpuv)
+library(RColorBrewer)
+library(httr)
+library(rjson)
+access_token="EAACEdEose0cBAELSbePelxeRdRGecOB6uNttczZAUdSU935qa2q8ANmnurNSxa1cYILZBB1ZCbMzgK5UgM2lQXrp586ReK4soZBZCSVHv4sHTnHFIIQcLxAWZC6h7cXiZA68ZCSgIZBfMzfVzmLMtcXuOzzPGTflcknhyw3hjjiBF0lqEe1UXmZBzvGZAdUHXhyvZCrAH1pSBHpWZBgZDZD"
+options(RCurlOptions=list(verbose=FALSE,capath=system.file("CurlSSL","cacert.pem",package="RCurl"),ssl.verifypeer=FALSE))
+me<-getUsers("me", token=access_token)
+View(me)
+updateStatus("I can't just trade R programming for anything, always making stuffs easy and soft", token=access_token)

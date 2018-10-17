@@ -1,0 +1,13 @@
+library(mclust)
+data(wreath)
+wreathBIC <- mclustBIC(wreath)
+wreathBIC <- mclustBIC(wreath, G = 1:20, x = wreathBIC)
+wreathModel <- summary(wreathBIC, data = wreath)
+mclust2Dplot(data = wreath, what = "density", identify = TRUE, parameters = wreathModel$parameters, z = wreathModel$z)
+wreathDefault <- mclustBIC(wreath)
+wreathCustomize <- mclustBIC(wreath, G = 1:20, x = wreathDefault)
+plot(wreathCustomize, G = 10:20, legendArgs = list(x = "bottomleft"))
+summary(wreathCustomize, wreath)
+################################################################################
+if (!require('RWordPress'))
+  install.packages('RWordPress', repos = 'http://www.omegahat.org/R', type = 'source')

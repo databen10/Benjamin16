@@ -43,20 +43,20 @@ Buhari <- score.sentiment(text5$text,pos.words,neg.words,.progress='text')
 rscorescore <- score.sentiment(tweet2_df$text,pos.words,neg.words,.progress='t')
 hist(Buhari$score)
 hist(rscorescore$score)
-consumerKey <- "iN2qMzjuw32eYw6dYA03dITHe"
+consumerKey <- "dRaorYV6dtzoC1zr1XZZEkxcM"
 reqURL <- "https://api.twitter.com/oauth/request_token"
 accessURL <- "https://api.twitter.com/oauth/access_token"
 authURL <- "https://api.twitter.com/oauth/authorize"
-consumerSecret <- "2lPfaBT5RjA3cQHAiI1BQj3juer321Y0PgAbkxN6o8c5dIz6kN"
-accessToken <- "897279190524981248-gy91expj0rTeNBCJsUBumjaduP7StDr"
-accessTokenSecret <- "l35WtHJJTR1y4IHPyjLRHEOVnapjkv92UjG3RR3LBhCvo"
-Cred <- OAuthFactory$new(consumerKey="iN2qMzjuw32eYw6dYA03dITHe",
-                             consumerSecret="2lPfaBT5RjA3cQHAiI1BQj3juer321Y0PgAbkxN6o8c5dIz6kN",
+consumerSecret <- "uOEP0FbH7f7M3tZtb6lwOCuHYYWnMZnGutDBc4wrSXUPR7gz8I"
+accessToken <- "1136413957860802562-C9OJn9s6kuVU8ZpJ267P1kP4ZEorh2"
+accessTokenSecret <- "JvSy9R9hPK2neySyFRxHb6iMa16JpMVDJbPAYeatkw4rl"
+Cred <- OAuthFactory$new(consumerKey="dRaorYV6dtzoC1zr1XZZEkxcM",
+                             consumerSecret="uOEP0FbH7f7M3tZtb6lwOCuHYYWnMZnGutDBc4wrSXUPR7gz8I",
                              requestURL="https://api.twitter.com/oauth/request_token",
                              accessURL= "https://api.twitter.com/access_token",
                              authURL="https://api.twitter.com/oauth/authorize")
 Cred$handshake()
-setup_twitter_oauth("iN2qMzjuw32eYw6dYA03dITHe","2lPfaBT5RjA3cQHAiI1BQj3juer321Y0PgAbkxN6o8c5dIz6kN","897279190524981248-gy91expj0rTeNBCJsUBumjaduP7StDr","l35WtHJJTR1y4IHPyjLRHEOVnapjkv92UjG3RR3LBhCvo")
+setup_twitter_oauth("dRaorYV6dtzoC1zr1XZZEkxcM","uOEP0FbH7f7M3tZtb6lwOCuHYYWnMZnGutDBc4wrSXUPR7gz8I","1136413957860802562-C9OJn9s6kuVU8ZpJ267P1kP4ZEorh2","JvSy9R9hPK2neySyFRxHb6iMa16JpMVDJbPAYeatkw4rl")
 tweet1 <- userTimeline("@chelseafc",n=100)
 tweet2 <- userTimeline("@manutd",n=100)
 tweet_df <- tbl_ df(map_df(tweet1,as.data.frame))
